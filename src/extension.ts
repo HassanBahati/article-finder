@@ -28,7 +28,7 @@ async function displayArticles() {
   });
 
   // if no article was selected return nothing
-  if (article == null) return null;
+  if (article == null) return;
 
   // if article was selected open it in an external window
   vscode.env.openExternal((article as any).link);
