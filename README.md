@@ -1,4 +1,4 @@
-# Article Finder README
+# Article Finder
 
 **Article Finder** is a Visual Studio Code extension that allows you to search and explore blog articles directly from your editor. Whether you're looking for tutorials, insights, or resources, Article Finder helps you stay informed without interrupting your workflow.
 
