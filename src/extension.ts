@@ -1,14 +1,5 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from "vscode";
 import axios from "axios";
-import { link } from "fs";
-
-type Article = {
-  label: string;
-  detail: string;
-  link: string;
-};
 
 // create a function to display the articles
 async function displayArticles() {
