@@ -10,9 +10,8 @@ type Article = {
   link: string;
 };
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
-export async function activate(context: vscode.ExtensionContext) {
+// create a function to display the articles
+async function displayArticles() {
   // fetch articiles
   const url = "https://jsonplaceholder.typicode.com/posts";
   const res = await axios.get(url);
@@ -24,19 +23,20 @@ export async function activate(context: vscode.ExtensionContext) {
     };
   });
 
-  // create a function to display the articles
-  async function displayArticles() {
-    const article = await vscode.window.showQuickPick(articles, {
-      matchOnDetail: true,
-    });
+  const article = await vscode.window.showQuickPick(articles, {
+    matchOnDetail: true,
+  });
 
-    // if no article was selected return nothing
-    if (article == null) return null;
+  // if no article was selected return nothing
+  if (article == null) return null;
 
-    // if article was selected open it in an external window
-    vscode.env.openExternal((article as any).link);
-  }
+  // if article was selected open it in an external window
+  vscode.env.openExternal((article as any).link);
+}
 
+// This method is called when your extension is activated
+// Your extension is activated the very first time the command is executed
+export async function activate(context: vscode.ExtensionContext) {
   displayArticles();
 
   // The command has been defined in the package.json file
