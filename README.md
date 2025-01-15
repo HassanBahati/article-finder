@@ -22,15 +22,3 @@ The extension adds the following customizable settings:
 ![alt text](.github/image2.png)
 - On clicking any of the articles, you the article will be opened in your browser after you grant the permission.
 ![alt text](.github/image3.png)
----
-
-## Release Notes
-
-### 1.0.0
-
-- Initial release of **Article Finder**.
-- Features include article search, preview, and open in browser.
-
----
-
-**Enjoy exploring articles with Article Finder!**
